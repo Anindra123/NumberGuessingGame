@@ -6,8 +6,9 @@ const randNo = document.querySelector(".number");
 const myGuess = document.querySelector(".guessed-number");
 const error = document.querySelector(".error");
 const heading = document.querySelector(".header");
-const result_container = document.querySelector('.result');
+let result_container = document.querySelector('.result');
 const title = document.querySelector(".title");
+const copyRight = document.querySelector(".copyright");
 let btn = document.querySelector(".submit");
 let reset;
 pguess.focus();
@@ -23,7 +24,7 @@ const check = e =>{
     else if(Number(pguess.value) > 20 || Number(pguess.value)<1){
         btn.disabled = true;
         btn.classList.add("disabled");
-        showError("Number should be between 1-100")
+        showError("Number should be between 1-20")
     }
     else{
 
@@ -77,9 +78,9 @@ const gameOver = () =>{
     randNo.textContent = `Number generated ${num}`;
     playAnim(randNo);
     reset = document.createElement('button');
+    result_container.append(reset);
     resetButtonStyling(reset);
     playAnim(reset);
-    document.body.append(reset);
     reset.onmouseenter = () =>{
        reset.style.background = "white";
        reset.style.color = "black";
@@ -121,7 +122,7 @@ const resetGame =()=>{
     pguess.focus();
     num = Math.floor(Math.random()*20)+1;
     btn.classList.add("disabled");
-    smoothScroll(title,1000);
+    smoothScroll(title,2000);
 }
 
 
