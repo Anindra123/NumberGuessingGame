@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Guess the number game</h1>
+    </header>
+    <section class="form">
+      <form>
+        <div class="form_items">
+          <label class="label" for="insert">Enter a number:</label>
+          <input
+            type="text"
+            name="number_input"
+            class="text-insert text-error"
+            id="insert"
+            placeholder="Enter a number 1-20"
+            autocomplete="off"
+          />
+          <span class="error"></span>
+          <button class="submit disabled">Submit</button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <div class="result">
+        <h1 class="header animation"></h1>
+        <p class="myresult animation"></p>
+        <p class="number animation"></p>
+        <p class="guessed-number animation"></p>
+      </div>
+    </section>
+  </body>
+  <script src="scripts/index.js"></script>
+</html>
